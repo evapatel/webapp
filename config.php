@@ -1,5 +1,5 @@
 <?php
-$serverName = "tcp:wit-dbserver.database.windows.net,1433";
+$serverName = "tcp:wit-db-server.database.windows.net,1433";
 $connectionOptions = array(
     "Database" => "WITRegistrationDB",
     "Uid" => "sqladmin",
