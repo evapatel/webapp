@@ -1,3 +1,28 @@
+<?php
+// Include the database configuration file
+include 'config.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the form data
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password for security
+
+    // Prepare an SQL statement
+    $sql = "INSERT INTO dbo.users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)";
+    $stmt = sqlsrv_prepare($conn, $sql, array(&$first_name, &$last_name, &$email, &$password));
+
+    // Execute the statement
+    if (sqlsrv_execute($stmt)) {
+        echo "Registration successful!";
+    } else {
+        echo "Error: Could not execute the query.";
+        die(print_r(sqlsrv_errors(), true));
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
