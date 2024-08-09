@@ -1,0 +1,86 @@
+/* Existing styles for register.php */
+/* Add your existing register.php styles here */
+
+/* New styles for index.php */
+
+/* Navigation styling */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #b91d2d;
+    overflow: hidden;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    background-color: #990000;
+}
+
+/* Info box styling */
+.info-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.info-content h2 {
+    color: #b91d2d;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.info-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b91d2d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.info-link:hover {
+    background-color: #990000;
+}
+
+.info-box img {
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #b91d2d;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
